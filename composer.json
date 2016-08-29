@@ -1,0 +1,52 @@
+{
+    "name": "zf3buch/entity-builder",
+    "description": "Entity Builder Console Application for the Zend Framework 3",
+    "license": "The MIT License (MIT)",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Ralf Eggert",
+            "email": "ralf@travello.de",
+            "homepage": "http://www.travello.de",
+            "role": "Developer"
+        }
+    ],
+    "homepage": "http://www.zendframeworkbuch.de/",
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "require": {
+        "php": "^5.6 || ^7.0",
+        "zendframework/zend-console": "^2.6",
+        "zendframework/zend-config": "^2.6",
+        "zendframework/zend-db": "^2.8",
+        "zendframework/zend-code": "^3.0",
+        "zendframework/zend-servicemanager": "^3.1"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~4.8 || ^5.0",
+        "squizlabs/php_codesniffer": "^2.3.1",
+        "zendframework/zend-filter": "^2.7.1",
+        "zendframework/zend-validator": "^2.8.1",
+        "container-interop/container-interop": "^1.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "ZF\\Console\\": "src/",
+            "EntityBuilder\\": "src/EntityBuilder/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "ZFTest\\Console\\": "test/"
+        }
+    },
+    "scripts": {
+        "check": [
+            "@cs-check",
+            "@test"
+        ],
+        "cs-check": "phpcs",
+        "cs-fix": "phpcbf",
+        "test": "phpunit"
+    }
+}
