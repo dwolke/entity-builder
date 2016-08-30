@@ -44,7 +44,7 @@ class CreateEntity extends AbstractCommand
         $result = $this->connectToDatabase($console);
 
         if (!$result) {
-            return 1;
+            return false;
         }
 
         $metaData = new Metadata($this->getDbAdapter());
@@ -65,7 +65,7 @@ class CreateEntity extends AbstractCommand
                 '[ERROR] Table "' . $tableParam . '" not found'
             );
 
-            return 1;
+            return false;
         }
 
         $console->writeLine(
@@ -101,7 +101,7 @@ class CreateEntity extends AbstractCommand
             '/' . $entityFileName . ' generated'
         );
 
-        return 0;
+        return true;
     }
 
     /**

@@ -23,20 +23,20 @@ class CheckDb extends AbstractCommand
      * @param Route            $route
      * @param AdapterInterface $console
      *
-     * @return int
+     * @return boolean
      */
     public function __invoke(Route $route, AdapterInterface $console)
     {
         $result = $this->connectToDatabase($console);
 
         if (!$result) {
-            return 1;
+            return false;
         }
 
         $console->writeLine(
             '[SUCCESS] Database connection was successful'
         );
 
-        return 0;
+        return true;
     }
 }
