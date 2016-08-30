@@ -32,7 +32,7 @@ class ShowTables extends AbstractCommand
         $result = $this->connectToDatabase($console);
 
         if (!$result) {
-            return false;
+            return 1;
         }
 
         $metaData = new Metadata($this->getDbAdapter());
@@ -59,6 +59,6 @@ class ShowTables extends AbstractCommand
             );
         }
 
-        return true;
+        return 0;
     }
 }
