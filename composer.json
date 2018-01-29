@@ -1,7 +1,7 @@
 {
     "name": "zf3buch/entity-builder",
     "description": "Entity Builder Console Application for the Zend Framework 3",
-    "license": "The MIT License (MIT)",
+    "license": "MIT",
     "type": "project",
     "authors": [
         {
